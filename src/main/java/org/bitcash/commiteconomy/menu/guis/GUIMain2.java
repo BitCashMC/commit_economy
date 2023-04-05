@@ -24,7 +24,9 @@ public class GUIMain2 extends InventoryGUI {
     }
 
     private void testrun() {
-        addItem(20,Material.DIAMOND_ORE,"&A&LLETS GOOOOO","&eHELL YEAHHHHHH","&eLETS GOOOOOOO","&cYEEEEEE");
+        addItem(20,Material.DIAMOND_ORE,"&A&L123","&e12345","&e12345","&c12345");
+        setFiller(Material.BLACK_STAINED_GLASS_PANE, "&7 ");
+
     }
 
     public static void openGUI(Player player) {

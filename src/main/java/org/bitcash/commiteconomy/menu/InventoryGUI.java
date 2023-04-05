@@ -113,5 +113,21 @@ public abstract class InventoryGUI {
         inv.setItem(slot, item);
 
     }
+
+    public void setFiller(Material fillerMaterial, String displayName) {
+        if (inv == null || !(inv instanceof Inventory)) {
+            throw new NullPointerException("The provided InventoryGUI was not instantiated correctly. All instances must call InventoryBuilder.buildInventory(InventoryGUI invgui, int size, String name)");
+        }
+        ItemStack filler = new ItemStack(fillerMaterial);
+        ItemMeta metadata = filler.getItemMeta();
+        metadata.setDisplayName(ChatColor.translateAlternateColorCodes('&', displayName));
+        filler.setItemMeta(metadata);
+
+        for (int i = 0; i < inv.getSize(); i++) {
+            if (inv.getItem(i) == null) {
+                inv.setItem(i, filler);
+            }
+        }
+    }
     
 }

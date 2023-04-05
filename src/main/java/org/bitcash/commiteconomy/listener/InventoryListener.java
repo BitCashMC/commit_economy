@@ -36,7 +36,7 @@ public class InventoryListener implements Listener {
     @EventHandler
     public void onOpenEvent(InventoryOpenEvent e) {
         Inventory env = e.getInventory();
-        if (!(REGISTERED_GUIS.containsKey(e))) return;
+        if (!(REGISTERED_GUIS.containsKey(env))) return;
 
         REGISTERED_GUIS.get(env).onOpen(e);
     }
