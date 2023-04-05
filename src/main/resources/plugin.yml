@@ -1,0 +1,10 @@
+name: 'CommitEconomy'
+version: '1.0'
+main: 'org.bitcash.commiteconomy.CommitEconomy'
+api-version: '1.19'
+commands:
+   shop:
+      description: 'opens the main shop menu'
+      usage: /shop
+      permission: commiteconomy.command.shop
+
