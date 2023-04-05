@@ -1,3 +1,4 @@
 /.vscode
 /export.bat
 /target
+/src/main/java/org/bitcash/commiteconomy/GUIMain.java
